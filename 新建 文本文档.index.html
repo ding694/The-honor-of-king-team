@@ -1,0 +1,1708 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="星曜电竞王者荣耀战队招新，寻找热爱游戏、喜欢开黑、上分和社交的玩家。加入战队，寻找你的固定队友与游戏CP。">
+
+    <title>星曜电竞 | 王者荣耀战队招新</title>
+
+    <style>
+
+        /* =========================
+           基础
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                "Microsoft YaHei",
+                "PingFang SC",
+                Arial,
+                sans-serif;
+
+            background: #090B18;
+            color: #ffffff;
+
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: auto;
+        }
+
+
+        /* =========================
+           导航栏
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(9, 11, 24, .9);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid
+                rgba(255,255,255,.08);
+        }
+
+        .nav {
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+
+            color: #F5C451;
+        }
+
+        .logo span {
+            color: #ffffff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+
+            color: #B8B9CC;
+
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-button {
+            padding: 10px 18px;
+
+            border-radius: 8px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #7C4DFF,
+                    #5B7CFF
+                );
+
+            font-weight: 700;
+
+            box-shadow:
+                0 8px 25px
+                rgba(124,77,255,.25);
+        }
+
+
+        /* =========================
+           Hero
+        ========================= */
+
+        .hero {
+            min-height: 700px;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 75% 30%,
+                    rgba(124,77,255,.3),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 20% 80%,
+                    rgba(255,95,162,.12),
+                    transparent 30%
+                );
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+
+            padding: 7px 14px;
+
+            margin-bottom: 22px;
+
+            border: 1px solid
+                rgba(245,196,81,.35);
+
+            border-radius: 30px;
+
+            color: #F5C451;
+
+            background:
+                rgba(245,196,81,.06);
+
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-size:
+                clamp(46px, 7vw, 82px);
+
+            line-height: 1.05;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            background:
+                linear-gradient(
+                    90deg,
+                    #F5C451,
+                    #FF5FA2,
+                    #7C4DFF
+                );
+
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-description {
+            max-width: 650px;
+
+            color: #A7A8BC;
+
+            font-size: 18px;
+
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+            margin-bottom: 35px;
+        }
+
+        .button {
+            padding: 14px 25px;
+
+            border-radius: 9px;
+
+            font-weight: 700;
+
+            transition: .2s;
+        }
+
+        .button-primary {
+            background:
+                linear-gradient(
+                    135deg,
+                    #7C4DFF,
+                    #5B7CFF
+                );
+
+            box-shadow:
+                0 10px 30px
+                rgba(124,77,255,.35);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .button-secondary {
+            border: 1px solid
+                rgba(255,255,255,.15);
+
+            color: #D1D2DF;
+        }
+
+        .button-secondary:hover {
+            background:
+                rgba(255,255,255,.06);
+        }
+
+        .hero-features {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+            color: #A7A8BC;
+
+            font-size: 14px;
+        }
+
+        .hero-features span {
+            color: #F5C451;
+        }
+
+
+        /* =========================
+           数据
+        ========================= */
+
+        .stats {
+            padding: 25px 0;
+
+            background: #111326;
+
+            border-top:
+                1px solid rgba(255,255,255,.06);
+
+            border-bottom:
+                1px solid rgba(255,255,255,.06);
+        }
+
+        .stats-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+
+            font-size: 25px;
+
+            color: #ffffff;
+        }
+
+        .stat span {
+            color: #85879D;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           通用 Section
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-tag {
+            color: #7C4DFF;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            max-width: 720px;
+
+            font-size:
+                clamp(32px, 5vw, 52px);
+
+            line-height: 1.1;
+
+            margin-bottom: 18px;
+        }
+
+        .section-description {
+            max-width: 650px;
+
+            color: #9193A9;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           招新要求
+        ========================= */
+
+        .requirements {
+            background: #0D0F21;
+        }
+
+        .requirement-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px;
+
+            margin-top: 50px;
+        }
+
+        .requirement-card {
+            padding: 35px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #15182F,
+                    #101225
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,.07);
+
+            border-radius: 16px;
+        }
+
+        .requirement-card h3 {
+            margin-bottom: 20px;
+
+            font-size: 24px;
+        }
+
+        .requirement-list {
+            display: grid;
+
+            gap: 14px;
+
+            list-style: none;
+
+            color: #A7A8BC;
+        }
+
+        .requirement-list li::before {
+            content: "✓";
+
+            color: #F5C451;
+
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           福利
+        ========================= */
+
+        .benefits-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            padding: 30px;
+
+            background: #111326;
+
+            border: 1px solid
+                rgba(255,255,255,.07);
+
+            border-radius: 15px;
+        }
+
+        .benefit-icon {
+            font-size: 32px;
+
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .benefit-card p {
+            color: #898BA1;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CP专区
+        ========================= */
+
+        .cp-section {
+            background:
+                radial-gradient(
+                    circle at 70% 50%,
+                    rgba(255,95,162,.13),
+                    transparent 40%
+                ),
+
+                #0D0F21;
+        }
+
+        .cp-box {
+            padding: 60px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #24152D,
+                    #17132E
+                );
+
+            border:
+                1px solid
+                rgba(255,95,162,.18);
+        }
+
+        .cp-box h2 {
+            font-size:
+                clamp(35px,5vw,58px);
+
+            margin-bottom: 18px;
+        }
+
+        .cp-box p {
+            max-width: 650px;
+
+            color: #B5A8BA;
+
+            margin-bottom: 30px;
+        }
+
+        .cp-options {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 15px;
+
+            margin-bottom: 30px;
+        }
+
+        .cp-option {
+            padding: 22px;
+
+            border-radius: 12px;
+
+            background:
+                rgba(255,255,255,.05);
+
+            border:
+                1px solid
+                rgba(255,255,255,.07);
+        }
+
+        .cp-option strong {
+            display: block;
+
+            margin-bottom: 5px;
+        }
+
+        .cp-option span {
+            color: #999AAC;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           活动
+        ========================= */
+
+        .events {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+
+            margin-top: 50px;
+        }
+
+        .event {
+            padding: 28px;
+
+            background: #111326;
+
+            border-radius: 15px;
+
+            border: 1px solid
+                rgba(255,255,255,.07);
+        }
+
+        .event-date {
+            color: #F5C451;
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+        }
+
+        .event h3 {
+            margin-bottom: 10px;
+        }
+
+        .event p {
+            color: #8E90A5;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           加入流程
+        ========================= */
+
+        .process {
+            background: #0D0F21;
+        }
+
+        .process-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 20px;
+
+            margin-top: 50px;
+        }
+
+        .process-card {
+            padding: 28px;
+
+            border-top:
+                2px solid #7C4DFF;
+        }
+
+        .process-number {
+            color: #7C4DFF;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+        }
+
+        .process-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .process-card p {
+            color: #8E90A5;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq-list {
+            max-width: 800px;
+
+            margin-top: 45px;
+        }
+
+        .faq {
+            padding: 23px 0;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.09);
+        }
+
+        .faq h3 {
+            margin-bottom: 8px;
+
+            font-size: 17px;
+        }
+
+        .faq p {
+            color: #85879D;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           最终 CTA
+        ========================= */
+
+        .cta {
+            padding-top: 30px;
+        }
+
+        .cta-box {
+            padding: 70px;
+
+            text-align: center;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #271B4B,
+                    #161B42
+                );
+
+            border:
+                1px solid
+                rgba(124,77,255,.25);
+        }
+
+        .cta-box h2 {
+            font-size:
+                clamp(35px,5vw,58px);
+
+            margin-bottom: 18px;
+        }
+
+        .cta-box p {
+            max-width: 620px;
+
+            margin: 0 auto 30px;
+
+            color: #A6A8BD;
+        }
+
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            padding: 35px 0;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.07);
+
+            color: #6F7186;
+
+            font-size: 13px;
+        }
+
+        .footer-content {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        /* =========================
+           平板
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+
+                padding: 90px 0;
+            }
+
+            .requirement-grid,
+            .benefits-grid,
+            .events {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .process-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .cp-options {
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+
+        /* =========================
+           手机
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: calc(100% - 32px);
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .nav {
+                height: 64px;
+            }
+
+            .nav-button {
+                display: none;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                text-align: center;
+
+                width: 100%;
+            }
+
+            .hero-features {
+                flex-direction: column;
+
+                gap: 8px;
+            }
+
+            .stats-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+
+                row-gap: 25px;
+            }
+
+            .requirement-grid,
+            .benefits-grid,
+            .events,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .requirement-card,
+            .benefit-card,
+            .event {
+                padding: 25px;
+            }
+
+            .cp-box {
+                padding: 35px 25px;
+            }
+
+            .cta-box {
+                padding: 45px 25px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     导航
+========================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            ✦ STARLIGHT<span> · 星曜电竞</span>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="#requirements">
+                招新要求
+            </a>
+
+            <a href="#benefits">
+                战队福利
+            </a>
+
+            <a href="#events">
+                活动
+            </a>
+
+            <a href="#cp">
+                CP搭档
+            </a>
+
+            <a href="#faq">
+                FAQ
+            </a>
+
+        </nav>
+
+        <a href="#join"
+           class="nav-button">
+
+            加入战队
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================
+     Hero
+========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-tag">
+                ⚔ 王者荣耀 · 战队招新
+            </div>
+
+            <h1>
+
+                不是一个人上分，
+                <span>是一群人一起赢。</span>
+
+            </h1>
+
+            <p class="hero-description">
+
+                星曜电竞正在寻找新的伙伴。
+                无论你想认真上分、寻找固定队友，
+                还是想认识一个聊得来的游戏搭档，
+                这里都有属于你的位置。
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#join"
+                   class="button button-primary">
+
+                    立即申请加入 →
+
+                </a>
+
+                <a href="#requirements"
+                   class="button button-secondary">
+
+                    查看招新要求
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-features">
+
+                <div>
+                    <span>⚔</span>
+                    固定开黑
+                </div>
+
+                <div>
+                    <span>♥</span>
+                    CP搭档
+                </div>
+
+                <div>
+                    <span>🎮</span>
+                    每周活动
+                </div>
+
+                <div>
+                    <span>🎁</span>
+                    成员福利
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     数据
+========================= -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <strong>500+</strong>
+            <span>战队成员</span>
+        </div>
+
+        <div class="stat">
+            <strong>100+</strong>
+            <span>固定车队</span>
+        </div>
+
+        <div class="stat">
+            <strong>30+</strong>
+            <span>每月活动</span>
+        </div>
+
+        <div class="stat">
+            <strong>24H</strong>
+            <span>社区活跃</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     招新要求
+========================= -->
+
+<section id="requirements"
+         class="requirements">
+
+    <div class="container">
+
+        <p class="section-tag">
+            JOIN US
+        </p>
+
+        <h2 class="section-title">
+            什么样的玩家适合加入？
+        </h2>
+
+        <p class="section-description">
+
+            我们不要求你必须是职业选手。
+            比起单纯的段位，我们更看重活跃度、
+            游戏态度以及团队交流。
+
+        </p>
+
+
+        <div class="requirement-grid">
+
+
+            <article class="requirement-card">
+
+                <h3>
+                    ⭐ 基础要求
+                </h3>
+
+                <ul class="requirement-list">
+
+                    <li>
+                        王者荣耀活跃玩家
+                    </li>
+
+                    <li>
+                        愿意参加战队活动
+                    </li>
+
+                    <li>
+                        有基本的团队意识
+                    </li>
+
+                    <li>
+                        遵守战队管理规则
+                    </li>
+
+                    <li>
+                        不恶意辱骂或骚扰队友
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <article class="requirement-card">
+
+                <h3>
+                    🔥 我们更欢迎
+                </h3>
+
+                <ul class="requirement-list">
+
+                    <li>
+                        喜欢组队开黑的玩家
+                    </li>
+
+                    <li>
+                        想寻找长期固定队友
+                    </li>
+
+                    <li>
+                        喜欢参加游戏活动
+                    </li>
+
+                    <li>
+                        想认识更多游戏好友
+                    </li>
+
+                    <li>
+                        愿意帮助新人融入战队
+                    </li>
+
+                </ul>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     福利
+========================= -->
+
+<section id="benefits">
+
+    <div class="container">
+
+        <p class="section-tag">
+            MEMBER BENEFITS
+        </p>
+
+        <h2 class="section-title">
+            加入以后，你能得到什么？
+        </h2>
+
+        <p class="section-description">
+
+            我们希望战队不只是一个“拉你进群”的地方，
+            而是真正可以认识朋友、一起玩游戏的社区。
+
+        </p>
+
+
+        <div class="benefits-grid">
+
+
+            <article class="benefit-card">
+
+                <div class="benefit-icon">
+                    ⚔️
+                </div>
+
+                <h3>
+                    固定开黑
+                </h3>
+
+                <p>
+                    寻找适合自己的固定车队，
+                    晚上一起排位、娱乐、五排。
+                </p>
+
+            </article>
+
+
+            <article class="benefit-card">
+
+                <div class="benefit-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    上分车队
+                </h3>
+
+                <p>
+                    根据段位和常玩位置匹配队友，
+                    减少一个人排位的孤独感。
+                </p>
+
+            </article>
+
+
+            <article class="benefit-card">
+
+                <div class="benefit-icon">
+                    🎁
+                </div>
+
+                <h3>
+                    战队福利
+                </h3>
+
+                <p>
+                    不定期举办抽奖、节日活动、
+                    活跃奖励等成员福利。
+                </p>
+
+            </article>
+
+
+            <article class="benefit-card">
+
+                <div class="benefit-icon">
+                    🎮
+                </div>
+
+                <h3>
+                    游戏活动
+                </h3>
+
+                <p>
+                    战队内战、娱乐赛、挑战赛、
+                    五排之夜等活动持续进行。
+                </p>
+
+            </article>
+
+
+            <article class="benefit-card">
+
+                <div class="benefit-icon">
+                    💬
+                </div>
+
+                <h3>
+                    活跃社区
+                </h3>
+
+                <p>
+                    不只是游戏，也可以聊天、
+                    分享攻略和认识新的朋友。
+                </p>
+
+            </article>
+
+
+            <article class="benefit-card">
+
+                <div class="benefit-icon">
+                    👑
+                </div>
+
+                <h3>
+                    成长机会
+                </h3>
+
+                <p>
+                    活跃成员可以参与战队管理、
+                    活动组织以及核心成员选拔。
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CP
+========================= -->
+
+<section id="cp"
+         class="cp-section">
+
+    <div class="container">
+
+        <div class="cp-box">
+
+            <p class="section-tag">
+                GAME PARTNER
+            </p>
+
+            <h2>
+                一个人上分很孤单？
+                <br>
+                找一个游戏搭档吧。💗
+            </h2>
+
+            <p>
+
+                想找固定双排、游戏CP或者只是一个
+                聊得来的游戏搭子？
+                可以向战队提交匹配申请，
+                我们会根据游戏习惯和在线时间进行匹配。
+
+            </p>
+
+
+            <div class="cp-options">
+
+                <div class="cp-option">
+
+                    <strong>
+                        💗 CP搭档
+                    </strong>
+
+                    <span>
+                        寻找长期游戏搭档
+                    </span>
+
+                </div>
+
+
+                <div class="cp-option">
+
+                    <strong>
+                        ⚔ 上分搭子
+                    </strong>
+
+                    <span>
+                        寻找实力相近队友
+                    </span>
+
+                </div>
+
+
+                <div class="cp-option">
+
+                    <strong>
+                        🎮 娱乐搭子
+                    </strong>
+
+                    <span>
+                        一起匹配、开黑、聊天
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a href="#join"
+               class="button button-primary">
+
+                申请CP匹配 →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     活动
+========================= -->
+
+<section id="events">
+
+    <div class="container">
+
+        <p class="section-tag">
+            EVENTS
+        </p>
+
+        <h2 class="section-title">
+            每周都有新的玩法。
+        </h2>
+
+        <p class="section-description">
+
+            不想每天只是重复排位？
+            来参加战队活动，认识更多队友。
+
+        </p>
+
+
+        <div class="events">
+
+
+            <article class="event">
+
+                <div class="event-date">
+                    每周五 · 20:00
+                </div>
+
+                <h3>
+                    🌙 五排之夜
+                </h3>
+
+                <p>
+                    晚间固定组队，随机匹配队友，
+                    一起开启欢乐五排。
+                </p>
+
+            </article>
+
+
+            <article class="event">
+
+                <div class="event-date">
+                    每周六 · 19:30
+                </div>
+
+                <h3>
+                    💗 CP默契挑战
+                </h3>
+
+                <p>
+                    双人组队完成趣味挑战，
+                    测试你和搭档之间的默契。
+                </p>
+
+            </article>
+
+
+            <article class="event">
+
+                <div class="event-date">
+                    每月最后一周
+                </div>
+
+                <h3>
+                    🏆 战队内战
+                </h3>
+
+                <p>
+                    战队成员之间进行趣味竞技，
+                    为荣誉和奖励而战。
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     加入流程
+========================= -->
+
+<section class="process">
+
+    <div class="container">
+
+        <p class="section-tag">
+            HOW TO JOIN
+        </p>
+
+        <h2 class="section-title">
+            加入战队，其实很简单。
+        </h2>
+
+
+        <div class="process-grid">
+
+
+            <article class="process-card">
+
+                <div class="process-number">
+                    STEP 01
+                </div>
+
+                <h3>
+                    进入审核群
+                </h3>
+
+                <p>
+                    点击下方按钮进入官方审核群。
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <div class="process-number">
+                    STEP 02
+                </div>
+
+                <h3>
+                    填写申请
+                </h3>
+
+                <p>
+                    提供游戏昵称、段位、
+                    常玩位置和基本信息。
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <div class="process-number">
+                    STEP 03
+                </div>
+
+                <h3>
+                    管理员审核
+                </h3>
+
+                <p>
+                    管理员会根据招新要求进行审核。
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <div class="process-number">
+                    STEP 04
+                </div>
+
+                <h3>
+                    正式加入
+                </h3>
+
+                <p>
+                    审核通过后进入战队，
+                    开始你的游戏之旅。
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section id="faq">
+
+    <div class="container">
+
+        <p class="section-tag">
+            FAQ
+        </p>
+
+        <h2 class="section-title">
+            加入之前，你可能想知道。
+        </h2>
+
+
+        <div class="faq-list">
+
+
+            <article class="faq">
+
+                <h3>
+                    Q：必须是高段位才能加入吗？
+                </h3>
+
+                <p>
+                    不一定。我们更看重活跃度、
+                    游戏态度和团队交流。
+                    不同水平的玩家都有机会找到合适的位置。
+                </p>
+
+            </article>
+
+
+            <article class="faq">
+
+                <h3>
+                    Q：加入战队需要收费吗？
+                </h3>
+
+                <p>
+                    正常加入战队不需要缴纳费用。
+                    如果未来举办特殊活动，
+                    会提前说明活动规则。
+                </p>
+
+            </article>
+
+
+            <article class="faq">
+
+                <h3>
+                    Q：不想找CP，只想找队友可以吗？
+                </h3>
+
+                <p>
+                    当然可以。CP匹配是可选服务，
+                    你也可以只参加排位、五排和战队活动。
+                </p>
+
+            </article>
+
+
+            <article class="faq">
+
+                <h3>
+                    Q：审核需要多久？
+                </h3>
+
+                <p>
+                    一般会在审核时间内尽快处理。
+                    具体时间取决于当天申请人数。
+                </p>
+
+            </article>
+
+
+            <article class="faq">
+
+                <h3>
+                    Q：加入后必须每天上线吗？
+                </h3>
+
+                <p>
+                    不需要。我们希望大家能够轻松游戏，
+                    但长期不活跃的成员可能会根据战队规则进行管理。
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     最终 CTA
+========================= -->
+
+<section id="join"
+         class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <p class="section-tag">
+                JOIN STARLIGHT
+            </p>
+
+            <h2>
+                下一局，
+                和我们一起赢。⚔
+            </h2>
+
+            <p>
+
+                不管你是来上分、找队友、
+                参加活动，还是寻找游戏CP，
+                星曜电竞都欢迎你的加入。
+
+            </p>
+
+
+            <!--
+                把下面的 # 换成你的QQ群/审核群链接
+            -->
+
+            <a href="#"
+               class="button button-primary">
+
+                进入审核群 →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     Footer
+========================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <p>
+            © 2026 STARLIGHT · 星曜电竞
+        </p>
+
+        <p>
+            王者荣耀游戏社区 · 玩家交流 · 战队招募
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
+```
